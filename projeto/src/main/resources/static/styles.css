@@ -1,0 +1,64 @@
+/* Custom Styles */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* bg-gray-100 */
+    color: #343a40; /* text-gray-800 */
+}
+
+.container {
+    max-width: 1200px; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem; /* p-4 */
+}
+
+.card {
+    background-color: #ffffff; /* bg-white */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* shadow-md */
+    padding: 1.5rem; /* p-6 */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+/* Ajustes para títulos e cores Bootstrap */
+h1, h2, h3, h4, h5, h6 {
+    color: #0d6efd; /* Cor primária do Bootstrap */
+}
+
+/* Mensagens de feedback */
+#create-project-message.text-success,
+#status-update-message.text-success,
+#allocate-members-message.text-success,
+#list-projects-message.text-success {
+    color: #198754 !important; /* Bootstrap success color */
+}
+
+#create-project-message.text-danger,
+#status-update-message.text-danger,
+#allocate-members-message.text-danger,
+#list-projects-message.text-danger,
+#login-error.text-danger {
+    color: #dc3545 !important; /* Bootstrap danger color */
+}
+
+/* Estilo para a lista de membros alocados no modal */
+#allocatedMembersList .list-group-item {
+    padding-left: 0.5rem;
+}
+
+/* Ajustes para botões de ação na tabela */
+.table-actions .btn {
+    margin-right: 0.5rem; /* Espaçamento entre botões */
+    margin-bottom: 0.5rem; /* Para empilhamento em telas pequenas */
+}
+
+/* Estilo para o span de informação da página */
+#pageInfo {
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+/* Ajuste para o input de data para ter largura total */
+input[type="date"].form-control {
+    width: 100%;
+}
