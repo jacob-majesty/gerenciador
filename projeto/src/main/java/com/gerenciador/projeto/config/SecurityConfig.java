@@ -27,7 +27,7 @@ public class SecurityConfig {
     }
 
     // Configura um UserDetailsService em memória para autenticação.
-    // O usuário 'user' e senha 'password123' são hardcoded aqui.
+    // O usuário 'user' e senha 'user123' são hardcoded aqui.
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
         UserDetails user = User.builder()
@@ -53,7 +53,7 @@ public class SecurityConfig {
                         // Todas as outras requisições para /api/** exigem autenticação
                         .requestMatchers("/api/**").authenticated()
                         // Se você tiver outros endpoints que não sejam /api/**, pode definir regras específicas ou tornar o resto autenticado
-                        .anyRequest().authenticated() // Qualquer outra requisição que não seja Swagger também exige autenticação
+                        .anyRequest().authenticated()
                 )
                 .httpBasic(org.springframework.security.config.Customizer.withDefaults()) // Habilita autenticação Basic HTTP
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)); // Para APIs RESTful, sem estado de sessão
