@@ -48,12 +48,18 @@ Credenciais padrão para desenvolvimento:
 A documentação completa dos endpoints está disponível via Swagger/OpenAPI:  
 http://localhost:8085/swagger-ui/index.html
 
+<img width="1535" height="835" alt="image" src="https://github.com/user-attachments/assets/7db3350c-6c48-4553-8160-765f2a0cecef" />
+
+
 ### Front-end
 O arquivo `index.html` inclui:
 http://localhost:8085/index.html 
 - Formulário de login personalizado
 - Tratamento de erros de autenticação (evita pop-up nativo do navegador)
 - Redirecionamento automático em caso de credenciais inválidas
+
+<img width="1400" height="858" alt="image" src="https://github.com/user-attachments/assets/0c5b534d-21bd-43f0-8f43-c0d0ee6210a7" />
+
 
 ## Requisitos Atendidos
 - [x] Arquitetura MVC com Spring Boot
