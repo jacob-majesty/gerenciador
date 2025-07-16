@@ -1,38 +1,63 @@
+
+
 # Sistema de Gerenciamento de Portfólio de Projetos
 
+## Visão Geral
 Este projeto visa desenvolver um sistema para gerenciar o portfólio de projetos de uma empresa, permitindo o acompanhamento completo do ciclo de vida de cada projeto, desde a análise de viabilidade até a finalização. O sistema oferece funcionalidades para gerenciamento de equipe, orçamento e risco.
 
-## Requisitos
+## Tecnologias e Arquitetura
+- **Arquitetura**: MVC (Model-View-Controller)
+- **Backend**: Spring Boot com Java 21
+- **Persistência**: JPA/Hibernate com PostgreSQL
+- **Documentação**: [Swagger/OpenAPI](#) (link a ser adicionado após deploy)
+- **Segurança**: Spring Security
+- **Containerização**: Docker
+- **Boas práticas**: Clean Code, Princípios SOLID, DTOs e tratamento global de exceções
 
-- **Arquitetura MVC**
-- **Spring Boot** como framework principal
-- **JPA + Hibernate** para persistência de dados
-- **Banco de Dados PostgreSQL**
-- **Clean Code** e **Princípios SOLID** aplicados
-- **DTOs** e **mapeamento** entre entidades
-- **Swagger/OpenAPI** para documentação dos endpoints
-- **Tratamento global de exceções**
-- **Testes unitários** com cobertura mínima de 70% nas regras de negócio
-- **Segurança básica** com **Spring Security** (usuário/senha hardcoded ou em memória)
+## Funcionalidades Principais
+### Gestão de Projetos
+- CRUD completo de projetos com campos como: nome, data de início, previsão de término, orçamento, descrição, status e gerente responsável
+- Status fixos do projeto com transições controladas (sem pular etapas)
+- Cálculo dinâmico da classificação de risco (baseado em orçamento e prazo)
 
-## Funcionalidades
+### Gestão de Equipe
+- Associação de membros ao projeto (somente membros com atribuição "funcionário")
+- Integração com API REST externa mockada para cadastro e consulta de membros
 
-- CRUD completo de projetos com campos como: nome, data de início, previsão de término, orçamento, descrição, status, e gerente responsável.
-- Cálculo dinâmico da classificação de risco do projeto, com base em orçamento e prazo.
-- Status fixos do projeto, com transições controladas e sem possibilidade de pular etapas.
-- Associação de membros ao projeto (somente membros com a atribuição “funcionário”).
-- API REST externa mockada para cadastro e consulta de membros.
-- Relatório resumido do portfólio com:
-    - Quantidade de projetos por status
-    - Total orçado por status
-    - Média de duração dos projetos encerrados
-    - Total de membros únicos alocados
+### Relatórios
+- Quantidade de projetos por status
+- Total orçado por status
+- Média de duração dos projetos encerrados
+- Total de membros únicos alocados
 
-## Tecnologias
+## Configuração e Uso
 
-- **Spring Boot**
-- **JPA** / **Hibernate**
-- **PostgreSQL**
-- **Swagger/OpenAPI**
-- **Spring Security**
-- **Docker**
+### Banco de Dados (Docker)
+```bash
+docker-compose up -d
+```
+- `up`: Inicia os serviços definidos no docker-compose.yml
+- `-d`: Executa em modo "detached" (em segundo plano)
+
+### Segurança (Spring Security)
+Credenciais padrão para desenvolvimento:
+- **Usuário**: user
+- **Senha**: user123
+
+### Documentação da API
+A documentação completa dos endpoints está disponível via Swagger/OpenAPI:  
+http://localhost:8085/swagger-ui/index.html
+
+### Front-end
+O arquivo `index.html` inclui:
+http://localhost:8085/index.html 
+- Formulário de login personalizado
+- Tratamento de erros de autenticação (evita pop-up nativo do navegador)
+- Redirecionamento automático em caso de credenciais inválidas
+
+## Requisitos Atendidos
+- [x] Arquitetura MVC com Spring Boot
+- [x] Persistência com JPA/Hibernate e PostgreSQL
+- [x] Documentação Swagger/OpenAPI
+- [x] Tratamento global de exceções
+- [x] Segurança básica com Spring Security
