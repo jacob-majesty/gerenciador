@@ -42,7 +42,7 @@ docker-compose up -d
 ### Segurança (Spring Security)
 Credenciais padrão para desenvolvimento:
 - **Usuário**: user
-- **Senha**: userd123
+- **Senha**: user123
 
 ### Documentação da API
 A documentação completa dos endpoints está disponível via Swagger/OpenAPI:  
