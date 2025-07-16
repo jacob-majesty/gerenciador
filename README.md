@@ -7,7 +7,7 @@ Este projeto visa desenvolver um sistema para gerenciar o portfólio de projetos
 
 ## Tecnologias e Arquitetura
 - **Arquitetura**: MVC (Model-View-Controller)
-- **Backend**: Spring Boot
+- **Backend**: Spring Boot com Java 21
 - **Persistência**: JPA/Hibernate com PostgreSQL
 - **Documentação**: [Swagger/OpenAPI](#) (link a ser adicionado após deploy)
 - **Segurança**: Spring Security
