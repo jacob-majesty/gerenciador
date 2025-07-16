@@ -9,10 +9,10 @@ import java.util.Map;
  */
 public class PortfolioSummaryDTO {
 
-    private Map<String, Long> projectsByStatus; // Quantidade de projetos por status [cite: 93]
-    private Map<String, BigDecimal> totalBudgetByStatus; // Total orçado por status [cite: 94]
-    private Double averageDurationOfFinishedProjects; // Média de duração dos projetos encerrados [cite: 95]
-    private Long totalUniqueMembersAllocated; // Total de membros únicos alocados [cite: 96]
+    private Map<String, Long> projectsByStatus; // Quantidade de projetos por status
+    private Map<String, BigDecimal> totalBudgetByStatus; // Total orçado por status
+    private Double averageDurationOfFinishedProjects; // Média de duração dos projetos encerrados
+    private Long totalUniqueMembersAllocated; // Total de membros únicos alocados
 
     // Getters e Setters
     public Map<String, Long> getProjectsByStatus() {

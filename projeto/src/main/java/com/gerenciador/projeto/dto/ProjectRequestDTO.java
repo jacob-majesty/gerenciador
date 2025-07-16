@@ -25,7 +25,7 @@ public class ProjectRequestDTO {
     private LocalDate forecastEndDate;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate actualEndDate; // Pode ser nulo se não finalizado [cite: 58]
+    private LocalDate actualEndDate; // Pode ser nulo se não finalizado
 
     @NotNull(message = "O orçamento total é obrigatório.")
     @DecimalMin(value = "0.0", inclusive = true, message = "O orçamento deve ser maior ou igual a zero.")
@@ -34,10 +34,9 @@ public class ProjectRequestDTO {
     private String description;
 
     @NotNull(message = "O gerente do projeto é obrigatório.")
-    private Long managerId; // Relacionamento com membro via API externa [cite: 62]
-
+    private Long managerId; // Relacionamento com membro via API externa
     @NotNull(message = "O status do projeto é obrigatório.")
-    private String status; // O status será validado como enum no serviço [cite: 63]
+    private String status; // O status será validado como enum no serviço
 
     // Getters e Setters
     public String getName() {
