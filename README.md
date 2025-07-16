@@ -50,6 +50,7 @@ http://localhost:8085/swagger-ui/index.html
 
 ### Front-end
 O arquivo `index.html` inclui:
+http://localhost:8085/index.html 
 - Formulário de login personalizado
 - Tratamento de erros de autenticação (evita pop-up nativo do navegador)
 - Redirecionamento automático em caso de credenciais inválidas
