@@ -46,7 +46,7 @@ Credenciais padrão para desenvolvimento:
 
 ### Documentação da API
 A documentação completa dos endpoints está disponível via Swagger/OpenAPI:  
-http://localhost:8080/swagger-ui.html
+http://localhost:8085/swagger-ui/index.html
 
 ### Front-end
 O arquivo `index.html` inclui:
