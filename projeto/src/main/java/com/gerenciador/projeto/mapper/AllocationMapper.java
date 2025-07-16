@@ -22,8 +22,6 @@ public class AllocationMapper {
         return Optional.ofNullable(allocation).map(source -> {
             MemberAllocationDTO dto = new MemberAllocationDTO();
             dto.setMemberId(source.getMemberId());
-            // O memberName não é preenchido aqui, pois requer uma consulta à API externa de membros.
-            // Isso será feito no ProjectService ou em um serviço de agregação de dados.
             return dto;
         }).orElse(null);
     }
