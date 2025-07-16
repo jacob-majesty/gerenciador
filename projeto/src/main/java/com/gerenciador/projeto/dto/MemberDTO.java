@@ -10,6 +10,12 @@ public class MemberDTO {
     private String name;
     private String role; // atribuição/cargo do membro [cite: 80]
 
+    public MemberDTO(long id, String name, String role) {
+        this.id = id;
+        this.name = name;
+        this.role = role;
+    }
+
     // Getters e Setters
     public Long getId() {
         return id;
